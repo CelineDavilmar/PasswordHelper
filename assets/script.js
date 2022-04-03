@@ -16,11 +16,15 @@ function generatePassword() {
     characterOption1();
     characterOption2();
     characterOption3();
-    requestedPassword();
+    //requestedPassword();
+    var charOption1;
+    var charOption2;
+    var charOption3;
+    var pwresult = "";
 
     //Collecting userInut for special characters option
     function characterOption1() {
-      let charOption1 = window.prompt("Do you want to include special characters? Input yes or no");
+      charOption1 = window.prompt("Do you want to include special characters? Input yes or no");
     
           switch (charOption1) {
             case "yes" || "Yes":
@@ -33,11 +37,12 @@ function generatePassword() {
             window.alert("Please only input yes or no");
             characterOption1();
           }
+          return charOption1;
         };
-    
+        
     //Collecting userInut for upper case & lowercase characters option
     function characterOption2() {
-      let charOption2 = window.prompt("Do you want to include upper case & lowercase characters? Input yes or no");
+      charOption2 = window.prompt("Do you want to include upper case & lowercase characters? Input yes or no");
           
           switch (charOption2) {
             case "yes" || "Yes":
@@ -50,11 +55,12 @@ function generatePassword() {
             window.alert("Please only input yes or no");
             characterOption2();
           }
+          return charOption2;
     };
-
+    
     //Collecting userInut for numeric characters option
     function characterOption3() {
-      let charOption3 = window.prompt("Do you want to include numeric characters? Input yes or no");
+      charOption3 = window.prompt("Do you want to include numeric characters? Input yes or no");
           
           switch (charOption3) {
             case "yes" || "Yes":
@@ -67,68 +73,70 @@ function generatePassword() {
             window.alert("Please only input yes or no");
             characterOption3();
           }
+          return charOption3;
         };
+
         function requestedPassword() {
-            var results = "";
             // Yes to special, upper & lower, and numeric
-          if ((characterOption1 === ("yes" || "Yes")) && (characterOption2 === ("yes" || "Yes")) && (characterOption3 === ("yes" || "Yes"))){
-            var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("yes" || "Yes")) && (charOption3 === ("yes" || "Yes"))){
+            var chars1 = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber1 = Math.floor(Math.random() * chars1.length);
+              return pwresult += chars1.substring(randomNumber1, randomNumber1 +1);
              };
 
             // Yes to special
-          } else if ((characterOption1 === ("yes" || "Yes")) && (characterOption2 === ("no" || "No")) &&  (characterOption3 === ("no" || "No"))) {
-            var chars = "!@#$%^&*()";
+          } else if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("no" || "No")) &&  (charOption3 === ("no" || "No"))) {
+            var chars2 = "!@#$%^&*()";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber2 = Math.floor(Math.random() * chars2.length);
+              return pwresult += chars2.substring(randomNumber2, randomNumber2 +1);
              };
 
             // Yes to upper & lower
-          }else if ((characterOption1 === ("no" || "No")) && (characterOption2 === ("yes" || "Yes")) &&  (characterOption3 === ("no" || "No"))) {
-            var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          }else if ((charOption1 === ("no" || "No")) && (charOption2 === ("yes" || "Yes")) &&  (charOption3 === ("no" || "No"))) {
+            var chars3 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber3 = Math.floor(Math.random() * chars3.length);
+              return pwresult += chars3.substring(randomNumber3, randomNumber3 +1);
             };
-
+            
             // Yes to numeric
-          }else if ((characterOption1 === ("no" || "No")) && (characterOption2 === ("no" || "No")) &&  (characterOption3 === ("yes" || "Yes"))) {
-            var chars = "0123456789";
+          }else if ((charOption1 === ("no" || "No")) && (charOption2 === ("no" || "No")) &&  (charOption3 === ("yes" || "Yes"))) {
+            var chars4 = "0123456789";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber4 = Math.floor(Math.random() * chars4.length);
+              return pwresult += chars4.substring(randomNumber4, randomNumber4 +1);
              };
 
             // Yes to special, and upper & lower
-          } else if ((characterOption1 === ("yes" || "Yes")) && (characterOption2 === ("yes" || "Yes")) &&  (characterOption3 === ("no" || "No"))) {
-            var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          } else if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("yes" || "Yes")) &&  (charOption3 === ("no" || "No"))) {
+            var chars5 = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber5 = Math.floor(Math.random() * chars5.length);
+              return pwresult += chars5.substring(randomNumber5, randomNumber5 +1);
              };
 
             // Yes to special and numeric
-          } else if ((characterOption1 === ("yes" || "Yes")) && (characterOption2 === ("no" || "No")) &&  (characterOption3 === ("yes" || "Yes"))) {
-            var chars = "0123456789!@#$%^&*()";
+          } else if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("no" || "No")) &&  (charOption3 === ("yes" || "Yes"))) {
+            var chars6 = "0123456789!@#$%^&*()";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber6 = Math.floor(Math.random() * chars6.length);
+              return pwresult += chars6.substring(randomNumber6, randomNumber6 +1);
              };
 
             // Yes to upper & lower and numeric
-          } else if ((characterOption1 === ("no" || "No")) && (characterOption2 === ("yes" || "Yes")) &&  (characterOption3 === ("yes" || "Yes"))){
-            var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          } else if ( (charOption1 === ("no" || "No")) && (charOption2 === ("yes" || "Yes")) &&  (charOption3 === ("yes" || "Yes"))){
+            var chars7 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             for (let i = 0; i < userInput; i++){
-              var randomNumber = Math.floor(Math.random() * chars.length);
-              results += chars.substring(randomNumber, randomNumber +1);
+              var randomNumber7 = Math.floor(Math.random() * chars7.length);
+              return pwresult += chars7.substring(randomNumber7, randomNumber7 +1);
              };
 
             // No to all
-          }else if ((characterOption1 === ("no" || "No")) && (characterOption2 === ("no" || "No")) &&  (characterOption3 === ("no" || "No"))) {
-            let result = window.confirm("you have no selected any specifications, would you like to try again and generate a random password? Please only select yes or no.");
+          }else {
+             
+            let result = window.confirm("you have not selected any specifications, would you like to try again and generate a random password? Please only select yes or no.");
             
             switch (result) {
               case true:
@@ -140,10 +148,9 @@ function generatePassword() {
                 break;
             }
           }
-
-          console.log(results);
         };
-
+        
+        return requestedPassword();
 };
 
 // Get references to the #generate element
