@@ -12,7 +12,8 @@
 
 # Website
 
+https://celinedavilmar.github.io/PasswordHelper/
 
 # Screenshots of Website
 
-<img src="./assets/PasswordGenerator.png"/>;
+<img src="./assets/PasswordGenerator.png"/>
