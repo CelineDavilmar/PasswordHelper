@@ -11,3 +11,8 @@
  JavaScript
 
 # Website
+
+
+# Screenshots of Website
+
+<img src="./assets/PasswordGenerator.png"/>;
