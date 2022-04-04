@@ -29,10 +29,8 @@ function generatePassword() {
     
           switch (charOption1) {
             case "yes" || "Yes":
-            //window.alert("Okay will generate password that is " + userInput + " numbers long with special characters included");
               break;
             case "no" || "No":
-            //window.alert("Okay will not include special characters and will make the password " + userInput + " numbers long");
               break;
             default :
             window.alert("Please only input yes or no");
@@ -47,10 +45,8 @@ function generatePassword() {
           
           switch (charOption2) {
             case "yes" || "Yes":
-            //window.alert("Okay will generate password that is " + userInput + " numbers long with upper case & lowercase characters included");
               break;
             case "no" || "No":
-            //window.alert("Okay will not include upper case & lowercase characters and will make the password " + userInput + " numbers long");
               break;
             default :
             window.alert("Please only input yes or no");
@@ -65,10 +61,8 @@ function generatePassword() {
           
           switch (charOption3) {
             case "yes" || "Yes":
-            //window.alert("Okay will generate password that is " + userInput + " numbers long with numeric characters included");
               break;
             case "no" || "No":
-            //window.alert("Okay will not include numeric characters and will make the password " + userInput + " numbers long");
               break;
             default :
             window.alert("Please only input yes or no");
@@ -82,7 +76,7 @@ function generatePassword() {
 
             // Yes to special, upper & lower, and numeric
           if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("yes" || "Yes")) && (charOption3 === ("yes" || "Yes"))){
-            var chars1 = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var chars1 = "5127693804lgmindopkqrcstuhvfawxeyjz!@#$%^&*()ELMCNIODPQFRASKTJUVHWXGYBZ";
             for (var i = 0; i <= userNum-1; i++){
               var randomNumber1 = Math.floor(Math.random() * chars1.length);
               return pwresult += chars1.substring(randomNumber1, randomNumber1 +userNum);
@@ -98,7 +92,7 @@ function generatePassword() {
 
             // Yes to upper & lower
           }else if ((charOption1 === ("no" || "No")) && (charOption2 === ("yes" || "Yes")) &&  (charOption3 === ("no" || "No"))) {
-            var chars3 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var chars3 = "lgmindopkqrcstuhvfawxeyjzELMCNIODPQFRASKTJUVHWXGYBZ";
             for (let i = 0; i <= userNum-1; i++){
               var randomNumber3 = Math.floor(Math.random() * chars3.length);
               return pwresult += chars3.substring(randomNumber3, randomNumber3 +userNum);
@@ -106,7 +100,7 @@ function generatePassword() {
             
             // Yes to numeric
           }else if ((charOption1 === ("no" || "No")) && (charOption2 === ("no" || "No")) &&  (charOption3 === ("yes" || "Yes"))) {
-            var chars4 = "0123456789";
+            var chars4 = "5127693804";
             for (let i = 0; i <= userNum-1; i++){
               var randomNumber4 = Math.floor(Math.random() * chars4.length);
               return pwresult += chars4.substring(randomNumber4, randomNumber4 +userNum);
@@ -114,7 +108,7 @@ function generatePassword() {
 
             // Yes to special, and upper & lower
           } else if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("yes" || "Yes")) &&  (charOption3 === ("no" || "No"))) {
-            var chars5 = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var chars5 = "lgmindopkqrcstuhvfawxeyjzELMCNIODPQFRASKTJUVHWXGYBZ!@#$%^&*()";
             for (let i = 0; i <= userNum-1; i++){
               var randomNumber5 = Math.floor(Math.random() * chars5.length);
               return pwresult += chars5.substring(randomNumber5, randomNumber5 +userNum);
@@ -122,7 +116,7 @@ function generatePassword() {
 
             // Yes to special and numeric
           } else if ((charOption1 === ("yes" || "Yes")) && (charOption2 === ("no" || "No")) &&  (charOption3 === ("yes" || "Yes"))) {
-            var chars6 = "0123456789!@#$%^&*()";
+            var chars6 = "5127693804!@#$%^&*()";
             for (let i = 0; i <= userNum-1; i++){
               var randomNumber6 = Math.floor(Math.random() * chars6.length);
               return pwresult += chars6.substring(randomNumber6, randomNumber6 +userNum);
@@ -130,7 +124,7 @@ function generatePassword() {
 
             // Yes to upper & lower and numeric
           } else if ( (charOption1 === ("no" || "No")) && (charOption2 === ("yes" || "Yes")) &&  (charOption3 === ("yes" || "Yes"))){
-            var chars7 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var chars7 = "5127693804lgmindopkqrcstuhvfawxeyjzELMCNIODPQFRASKTJUVHWXGYBZ";
             for (let i = 0; i <= userNum-1; i++){
               var randomNumber7 = Math.floor(Math.random() * chars7.length);
               return pwresult += chars7.substring(randomNumber7, randomNumber7 +userNum);
